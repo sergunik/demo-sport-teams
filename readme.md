@@ -38,15 +38,15 @@ Schema for players table (you may add additional fields as needed):
 
 1. Checkout this repo: `git clone https://github.com/sergunik/demo-sport-teams.git`
 
-1. Go inside dir: `cd demo-sport-teams`
+1. Go inside Laradock: `cd demo-sport-teams/laradock`
 
 1. Run docker container (Laradock): `docker-compose up -d nginx mysql workspace`
 
 1. Go inside container: `docker-compose exec workspace bash`
 
-1. Change directory: `cd /var/www`
+1. Should be in www-directory: `cd /var/www`
 
-1. Run composer update with bonus (migrations, seeds, etc): `composer quick-prepare`
+1. Run composer install with bonus (migrations, seeds, etc): `composer quick-prepare`
 
 1. Open demo in browser. Url: `http://localhost/`
 
@@ -120,4 +120,8 @@ Do not forget about `Accept` header in each request.
 ## ToDo (future improvements)
 - Create relation in Database between Team and Players
 - Improve Create and Update API calls according to relations (Team and Players)
-- Implement registration  
+- Implement registration
+- Unit testing
+
+## Testing
+Smoke testing done (MacOS 10.14.2)
