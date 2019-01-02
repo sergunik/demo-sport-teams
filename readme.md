@@ -1,6 +1,6 @@
 ## Demo code "Sports team"
 
-###Requirements:
+##Requirements:
 
 Include the following elements:
 - migration for adding the teams table
@@ -31,6 +31,7 @@ Schema for players table (you may add additional fields as needed):
 
 - [Laravel](https://laravel.com/) - framework
 - [Laradock](https://laradock.io/) - Laravel-ready docker container
+- [Composer](https://getcomposer.org/) - Dependency Manager for PHP
 
 ## How to run?
 
