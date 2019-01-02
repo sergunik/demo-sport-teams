@@ -52,10 +52,10 @@ Schema for players table (you may add additional fields as needed):
 
 ## REST API
 ### Available methods:
-- `GET` Retrieve resources
-- `POST` Create resource
-- `PATCH` Update resource
-- `DELETE` Delete resource
+- `GET` Retrieve resources _(without authentications)_
+- `POST` Create resource _(protected)_
+- `PATCH` Update resource _(protected)_
+- `DELETE` Delete resource _(protected)_
 
 ### Request headers:
 Do not forget about `Accept` header in each request.
@@ -91,4 +91,28 @@ Do not forget about `Accept` header in each request.
 - `500` Internal server error. Ideally you're not going to be explicitly returning this, but if something unexpected breaks, this is what your user is going to receive.
 - `503` Service unavailable. Pretty self explanatory, but also another code that is not going to be returned explicitly by the application.
 
+### Authentication method
+- Go to Database and select any email. Password default for all account (`secret`).
+- Open your [favorite rest-client](https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm) and send POST-request to  `http://localhost/api/login`
 
+    Headers:
+    ```
+    Accept: application/json
+    ```
+    Body:
+    ```
+    email = some-email-from-database@foo.bar
+    password = secret
+    ```
+    
+    (Screenshot)[]
+
+- Use protected API calls with token. Need only put token into headers with special word `Bearer`. 
+    
+    Headers:
+    ```
+    Accept: application/json
+    Authorization: Bearer eyJ0eXAiOiJKDFHRCXCSV1Q...NuWU
+    ```
+    
+    (Screenshot)[]
