@@ -22,3 +22,9 @@ Route::get('players/{player}',      '\App\API\Controllers\PlayerController@show'
 Route::post('players',              '\App\API\Controllers\PlayerController@store');
 Route::patch('players/{player}',    '\App\API\Controllers\PlayerController@update');
 Route::delete('players/{player}',   '\App\API\Controllers\PlayerController@destroy');
+
+Route::get('teams',                 '\App\API\Controllers\TeamController@index');
+Route::get('teams/{team}',          '\App\API\Controllers\TeamController@show');
+Route::post('teams',                '\App\API\Controllers\TeamController@store');
+Route::patch('teams/{team}',        '\App\API\Controllers\TeamController@update');
+Route::delete('teams/{team}',       '\App\API\Controllers\TeamController@destroy');

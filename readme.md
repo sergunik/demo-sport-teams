@@ -77,4 +77,12 @@ Schema for players table (you may add additional fields as needed):
 - PATCH: `http://localhost/api/players/{player_id}` - Update the specified resource.
 - DELETE: `http://localhost/api/players/{player_id}` - Remove the specified resource.
 
+### Play with teams:
+
+- GET: `http://localhost/api/teams` - Display a listing of the resources.
+- GET: `http://localhost/api/teams/{team_id}` - Display the specified resource.
+- POST: `http://localhost/api/teams` - Create new resource.
+- PATCH: `http://localhost/api/teams/{team_id}` - Update the specified resource.
+- DELETE: `http://localhost/api/teams/{team_id}` - Remove the specified resource.
+
 

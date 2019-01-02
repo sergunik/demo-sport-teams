@@ -28,7 +28,7 @@ class PlayerController extends Controller
      */
     public function store(PlayerRequest $request)
     {
-        $player = Article::create($request->validated());
+        $player = Team::create($request->validated());
         return response()->json($player, Response::HTTP_CREATED);
     }
 
