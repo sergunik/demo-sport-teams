@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('team', 'TeamController');
+Route::resource('player', 'PlayerController');
