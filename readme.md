@@ -105,7 +105,7 @@ Do not forget about `Accept` header in each request.
     password = secret
     ```
     
-    (Screenshot)[]
+    ![Get token](https://raw.githubusercontent.com/sergunik/demo-sport-teams/master/screenshot_1.png)
 
 - Use protected API calls with token. Need only put token into headers with special word `Bearer`. 
     
@@ -115,4 +115,9 @@ Do not forget about `Accept` header in each request.
     Authorization: Bearer eyJ0eXAiOiJKDFHRCXCSV1Q...NuWU
     ```
     
-    (Screenshot)[]
+    ![Drop player](https://raw.githubusercontent.com/sergunik/demo-sport-teams/master/screenshot_2.png)
+    
+## ToDo (future improvements)
+- Create relation in Database between Team and Players
+- Improve Create and Update API calls according to relations (Team and Players)
+- Implement registration  
