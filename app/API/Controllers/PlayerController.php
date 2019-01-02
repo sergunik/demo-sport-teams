@@ -2,8 +2,9 @@
 
 namespace App\API\Controllers;
 
+use App\Http\Requests\PlayerRequest;
 use App\Player;
-use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class PlayerController extends Controller
 {
@@ -22,14 +23,13 @@ class PlayerController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\PlayerRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlayerRequest $request)
     {
-        //ToDo: implement validation
-        $player = Article::create($request->all());
-        return response()->json($player, 201);
+        $player = Article::create($request->validated());
+        return response()->json($player, Response::HTTP_CREATED);
     }
 
     /**
@@ -46,15 +46,14 @@ class PlayerController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\PlayerRequest  $request
      * @param  \App\Player  $player
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Player $player)
+    public function update(PlayerRequest $request, Player $player)
     {
-        //ToDo: implement validation
-        $player->update($request->all());
-        return response()->json($player, 200);
+        $player->update($request->validated());
+        return response()->json($player, Response::HTTP_OK);
     }
 
     /**
@@ -66,6 +65,6 @@ class PlayerController extends Controller
     public function destroy(Player $player)
     {
         $player->delete();
-        return response()->json(null, 204);
+        return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 }

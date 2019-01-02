@@ -35,15 +35,17 @@ Schema for players table (you may add additional fields as needed):
 
 ## How to run?
 
-1. Checkout this repo: `git clone ...`
+1. Checkout this repo: `git clone https://github.com/sergunik/demo-sport-teams.git`
 
-1. Run docker container: `docker-compose up -d nginx mysql workspace`
+1. Go inside dir: `cd demo-sport-teams`
+
+1. Run docker container (Laradock): `docker-compose up -d nginx mysql workspace`
 
 1. Go inside container: `docker-compose exec workspace bash`
 
 1. Change directory: `cd /var/www`
 
-1. Download vendors: `...`
+1. Run composer update with bonus (migrations, seeds, etc): `composer quick-prepare`
 
 1. Open demo in browser. Url: `http://localhost/`
 
