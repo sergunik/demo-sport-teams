@@ -1,6 +1,6 @@
-## Demo code "Sports team"
+# Demo code "Sports team"
 
-##Requirements:
+## Requirements:
 
 Include the following elements:
 - migration for adding the teams table
@@ -27,7 +27,7 @@ Schema for players table (you may add additional fields as needed):
 - created_at
 - updated_at
 
-## Used:
+## In demo used:
 
 - [Laravel](https://laravel.com/) - framework
 - [Laradock](https://laradock.io/) - Laravel-ready docker container
@@ -46,3 +46,33 @@ Schema for players table (you may add additional fields as needed):
 1. Download vendors: `...`
 
 1. Open demo in browser. Url: `http://localhost/`
+
+## REST API
+### Available methods:
+- `GET` Retrieve resources
+- `POST` Create resource
+- `PATCH` Update resource
+- `DELETE` Delete resource
+
+### HTTP Status Codes
+
+- `200` OK. The standard success code and default option.
+- `201` Object created. Useful for the store actions.
+- `204` No content. When an action was executed successfully, but there is no content to return.
+- `206` Partial content. Useful when you have to return a paginated list of resources.
+- `400` Bad request. The standard option for requests that fail to pass validation.
+- `401` Unauthorized. The user needs to be authenticated.
+- `403` Forbidden. The user is authenticated, but does not have the permissions to perform an action.
+- `404` Not found. This will be returned automatically by Laravel when the resource is not found.
+- `500` Internal server error. Ideally you're not going to be explicitly returning this, but if something unexpected breaks, this is what your user is going to receive.
+- `503` Service unavailable. Pretty self explanatory, but also another code that is not going to be returned explicitly by the application.
+
+### Play with players:
+
+- GET: `http://localhost/api/players` - Display a listing of the resources.
+- GET: `http://localhost/api/players/{player_id}` - Display the specified resource.
+- POST: `http://localhost/api/players` - Create new resource.
+- PATCH: `http://localhost/api/players/{player_id}` - Update the specified resource.
+- DELETE: `http://localhost/api/players/{player_id}` - Remove the specified resource.
+
+
